@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:title" content="Привет!" />
   <meta property="og:description" content="Подарки, бонусы и полезные фишки — заходи!" />
-  <meta property="og:image" content="https://<ТВОЙ_НИК>.github.io/telegram-webapp/preview.png" />
-  <meta property="og:url" content="https://<ТВОЙ_НИК>.github.io/telegram-webapp/" />
+  <meta property="og:image" content="https://l1m0n22.github.io/ggg/preview.png" />
+  <meta property="og:url" content="https://l1m0n22.github.io/ggg/" />
   <title>Привет от бота</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
     body {
       margin: 0;
@@ -30,15 +31,33 @@
       margin-top: 20px;
       font-size: 1.2rem;
     }
+    .btn {
+      margin-top: 25px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #30a8f0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #1f93d0;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="photo_2025-07-04_00-05-15.jpg" alt="Welcome" />
+    <img src="preview.png" alt="Welcome" />
     <div class="text">
       Добро пожаловать в нашего бота! 🎉<br />
       Здесь вы найдёте бонусы, подарки и крутые фишки — всё для старта.
     </div>
+    <button class="btn" onclick="Telegram.WebApp.close()">🚀 Начать</button>
   </div>
+  <script>
+    Telegram.WebApp.expand();
+  </script>
 </body>
 </html>
